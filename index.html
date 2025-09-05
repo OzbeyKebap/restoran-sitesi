@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Özbey Restoran</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #FFD700;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+      z-index: 1000;
+    }
+
+    header nav a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    header nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url("https://via.placeholder.com/1920x1080") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #FFD700;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+    }
+
+    .section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #FFD700;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .menu-item {
+      background: #111;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      color: #FFD700;
+    }
+
+    .menu-item p {
+      margin: 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .contact {
+      text-align: center;
+      line-height: 1.8;
+      color: #FFD700;
+    }
+
+    footer {
+      background: #111;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .category {
+      margin-bottom: 50px;
+    }
+
+    .category h3 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #FFD700;
+      border-bottom: 2px solid #FFD700;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Üst Menü -->
+  <header>
+    <nav>
+      <a href="#hero">Ana Sayfa</a>
+      <a href="#menu">Menü</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>Özbey Restoran</h1>
+    <p>Samimi atmosferimiz ve lezzetli yemeklerimizle sizi bekliyoruz.</p>
+  </section>
+
+  <!-- Ana Menü (Sadece 3 ürün) -->
+  <section id="menu" class="section">
+    <h2>Menüden Seçtiklerimiz</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Süzme Mercimek Çorbası</h3>
+        <p>100 ₺</p>
+      </div>
+      <div class="menu-item">
+        <h3>Özbey Karışık Kebap</h3>
+        <p>800 ₺</p>
+      </div>
+      <div class="menu-item">
+        <h3>Adana Kebap</h3>
+        <p>1500 ₺ (1kg)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tüm Menü -->
+  <section class="section">
+    <h2>Tüm Menü</h2>
+
+    <div class="category">
+      <h3>🥗 Salatalar</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Çoban Salata</h3><p>100 ₺</p></div>
+        <div class="menu-item"><h3>Mevsim Salata</h3><p>100 ₺</p></div>
+        <div class="menu-item"><h3>Gavur Dağı Salata</h3><p>150 ₺</p></div>
+        <div class="menu-item"><h3>Özbey Özel Salata</h3><p>150 ₺</p></div>
+        <div class="menu-item"><h3>Tablacı Salatası</h3><p>80 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🍲 Çorbalar</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Süzme Mercimek</h3><p>100 ₺</p></div>
+        <div class="menu-item"><h3>Tavuk Suyu Çorba</h3><p>120 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🍟 Aperatifler</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Porsiyon Çiğköfte</h3><p>150 ₺</p></div>
+        <div class="menu-item"><h3>Patates Kızartması</h3><p>120 ₺</p></div>
+        <div class="menu-item"><h3>Patates + Köfte</h3><p>350 ₺</p></div>
+        <div class="menu-item"><h3>Patates + Yumuşak Tavuk</h3><p>350 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🥩 Kebaplar & Et Yemekleri</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>1kg Kasap Köfte</h3><p>990 ₺</p></div>
+        <div class="menu-item"><h3>1kg Adana</h3><p>1500 ₺</p></div>
+        <div class="menu-item"><h3>1kg Kanat</h3><p>490 ₺</p></div>
+        <div class="menu-item"><h3>1kg Tavuk Şiş</h3><p>690 ₺</p></div>
+        <div class="menu-item"><h3>Porsiyon Kanat</h3><p>280 ₺</p></div>
+        <div class="menu-item"><h3>Porsiyon Tavuk Şiş</h3><p>330 ₺</p></div>
+        <div class="menu-item"><h3>Porsiyon Urfa Usulü Tavuk</h3><p>330 ₺</p></div>
+        <div class="menu-item"><h3>Porsiyon Tavuk Pirzola</h3><p>280 ₺</p></div>
+        <div class="menu-item"><h3>Özbey Tavuk Karışık</h3><p>450 ₺</p></div>
+        <div class="menu-item"><h3>Adana Yaprak Kebap</h3><p>450 ₺</p></div>
+        <div class="menu-item"><h3>Antep Küşneme</h3><p>650 ₺</p></div>
+        <div class="menu-item"><h3>Urfa Sade Kebap</h3><p>450 ₺</p></div>
+        <div class="menu-item"><h3>Patlıcanlı Kebap</h3><p>600 ₺</p></div>
+        <div class="menu-item"><h3>Domatesli Kebap</h3><p>600 ₺</p></div>
+        <div class="menu-item"><h3>Soğanlı Kebap</h3><p>600 ₺</p></div>
+        <div class="menu-item"><h3>Ciğer Şiş</h3><p>500 ₺</p></div>
+        <div class="menu-item"><h3>Çöp Şiş</h3><p>500 ₺</p></div>
+        <div class="menu-item"><h3>Özbey Karışık Kebap</h3><p>800 ₺</p></div>
+        <div class="menu-item"><h3>Kasap Köfte</h3><p>400 ₺</p></div>
+        <div class="menu-item"><h3>Beyti</h3><p>600 ₺</p></div>
+        <div class="menu-item"><h3>Alinazik</h3><p>600 ₺</p></div>
+        <div class="menu-item"><h3>Bonfile</h3><p>650 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🍕 Pideler & Lahmacun</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Lahmacun Acılı</h3><p>100 ₺</p></div>
+        <div class="menu-item"><h3>Lahmacun Acısız</h3><p>100 ₺</p></div>
+        <div class="menu-item"><h3>Fındık Lahmacun</h3><p>40 ₺</p></div>
+        <div class="menu-item"><h3>Kaşarlı Pide</h3><p>300 ₺</p></div>
+        <div class="menu-item"><h3>Kaşarlı Sucuklu Pide</h3><p>330 ₺</p></div>
+        <div class="menu-item"><h3>Kuşbaşılı Pide</h3><p>360 ₺</p></div>
+        <div class="menu-item"><h3>Kuşbaşılı Kaşarlı Pide</h3><p>360 ₺</p></div>
+        <div class="menu-item"><h3>Kıymalı Pide</h3><p>330 ₺</p></div>
+        <div class="menu-item"><h3>Kıymalı Kaşarlı Pide</h3><p>360 ₺</p></div>
+        <div class="menu-item"><h3>Karışık Pide</h3><p>400 ₺</p></div>
+        <div class="menu-item"><h3>Kavurmalı Pide</h3><p>400 ₺</p></div>
+        <div class="menu-item"><h3>Kavurmalı Kaşarlı Pide</h3><p>450 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🌯 Dürümler</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Adana Dürüm</h3><p>200 ₺</p></div>
+        <div class="menu-item"><h3>Urfa Dürüm</h3><p>200 ₺</p></div>
+        <div class="menu-item"><h3>Tavuk Şiş Dürüm</h3><p>160 ₺</p></div>
+        <div class="menu-item"><h3>Ciğer Şiş Dürüm</h3><p>250 ₺</p></div>
+        <div class="menu-item"><h3>Çöp Şiş Dürüm</h3><p>250 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🥤 İçecekler</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Açık Ayran</h3><p>50 ₺</p></div>
+        <div class="menu-item"><h3>Kapalı Ayran</h3><p>50 ₺</p></div>
+        <div class="menu-item"><h3>Şişe Kola</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Kutu Kola</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Kutu Fanta</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Ice Tea</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Meyve Suları</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Şalgam</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Sprite</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Zero Kola</h3><p>70 ₺</p></div>
+        <div class="menu-item"><h3>Meyveli Soda</h3><p>40 ₺</p></div>
+        <div class="menu-item"><h3>Sade Soda</h3><p>30 ₺</p></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>🍮 Tatlılar</h3>
+      <div class="menu-grid">
+        <div class="menu-item"><h3>Katmer</h3><p>160 ₺</p></div>
+        <div class="menu-item"><h3>Künefe</h3><p>160 ₺</p></div>
+        <div class="menu-item"><h3>Sütlaç</h3><p>160 ₺</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="contact" class="section contact">
+    <h2>İletişim</h2>
+    <p><strong>Adres:</strong> Ic Kapi, bahçeşehir 2 kısım esenkent bahçeşehir yolu Dis Kapi No: 94, No: 1, 34488 Başakşehir/İstanbul</p>
+    <p><strong>Telefon:</strong> (0212) 672 07 72</p>
+  </section>
+
+  <footer>
+    © 2025 Özbey Restoran - Tüm Hakları Saklıdır
+  </footer>
+</body>
+</html>
